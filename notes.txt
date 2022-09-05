@@ -1,0 +1,57 @@
+Orientação a objetos
+
+Métodos especiais
+
+-> Construtores
+- Uma função utilizada apra criar e/ou inicializar objetos
+- Executada uma única vez, quando o objeto é criado
+
+-> Destrutores
+- Funções que atuam no momento de destruição de um objeto
+
+1. Abstração.
+2. Indicar candidatos a objetos.
+3. Levantar o tipo abstrato de dados (TAD) -> quais atributos.
+4. Levantar o tipo abstrato de procedimentos (TAP) -> quais métodos.
+5. Implementar!
+
+Exemplo
+
+Carta
+atributos (TAD) {
+	+ naipe
+	+ valor
+	+ cor
+}
+
+métodos (TAP) {
+	+ exibirCarta()
+	+ getValor()
+	+ getNaipe()
+	+ getCor()
+}
+	|
+	|
+	|  (Carta e baralho estão ligados entre si)
+	|
+	|
+   \ /
+	V
+Baralho
+atributos (TAD) {
+	+ qtdCartas()
+	+ container[]
+}
+
+métodos (TAP) {
+	+ embaralhar()
+	+ criarCarta()
+	+ retirarCarta()
+	+ reporCarta()
+	+ temCarta()
+	+ exibirCartas()
+	+ estaCompleto()
+	+ numCartas()
+}
+
+Parei no slide de número 50 (aula01-POO)

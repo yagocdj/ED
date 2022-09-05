@@ -1,0 +1,18 @@
+# Semáforo
+
+## Candidato(s) a objeto(s)
+
+- Semáforo
+- Timer
+
+## Tipo abstrato de dados
+
+- luzes (conjunto formado pelas luzes verde, amarela e vermelha)
+- timers (verde, amarelo, vermelho)
+- estado atual
+
+## Tipo abstrato de procedimentos
+
+- mudarEstadoAtual()
+- mudarTempoTransicao()
+- contagemRegressiva()

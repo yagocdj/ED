@@ -1,0 +1,11 @@
+1. Abstração
+2. Indicar candidatos a objetos
+	a) carta
+	b) baralho
+3. Levantar o tipo abstrato de dados (TAD)
+	
+	Carta {
+
+		- Naipe;
+		- valor;
+		- cor;

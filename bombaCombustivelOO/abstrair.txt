@@ -1,0 +1,31 @@
+=> Bomba de combustível (álcool e gasolina)
+
+- Frentista abastece o combustível do carro de acordo com a indicação do cliente
+- Abastecimento inicia -> visor de combustível tem seu valor alterado enquanto a quantia (em reais) que o cliente pediu não é atingida
+- "Total a pagar" e "litros" são atualizados gradualmente
+- É possível reajustar o preço tanto do álcool quanto da gasolina
+
+=> Candidatos a objetos
+
+- Bomba de combustível
+- Cliente
+- Frentista
+- Carro
+
+=> TAD (bomba de combustível)
+
+- Valor total em reais (R$)
+- Litros abastecidos
+- Preço do litro da gasolina
+- Preço do litro do álcool
+
+=> TAP (bomba de combustível)
+
+- mudarPrecoGasolina()
+- mudarPrecoAlcool()
+- escolherTipoCombustivel()
+- exibirPrecoGasolina()
+- exibirPrecoAlcool()
+- exbirTotalAbastecido()
+- exibirTotalGasto()
+- abastecer()
