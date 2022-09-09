@@ -1,12 +1,13 @@
-from PilhaSequencial import Pilha
+from PilhaSequencial import Pilha, PilhaException
 
 userChoice = ''
+userInput = ''
+returnElement = ''
 
 while userChoice != 'sair':
     allStacks = [Pilha()]
     currentStack = 0
-    allStacks[currentStack].empilha(10)
-    allStacks[currentStack].empilha(20)
+    # CORRIGIR O ERRO DA LINHA 16
     print(
         f'''
     \rEditor de Pilha v1.2
@@ -29,5 +30,17 @@ while userChoice != 'sair':
     \r=====================================
     '''
     )
-    userChoice = input('Digite a sua opção: ')
-    # TERMINAR ESTE PROGRAMA
+    userChoice = input('Digite a sua opção: ').lower()
+
+    if userChoice == 'e':
+        userInput = input('Elemento que você deseja empilhar na pilha: ')
+        allStacks[currentStack].empilha(userInput)
+
+    elif userChoice == 'd':
+        try:
+            userInput = input(
+                'Elemento que você deseja desempilhar da pilha: ')
+            returnElement = allStacks[currentStack].desempilha()
+            print(f'\nElemento {returnElement} removido do topo.')
+        except PilhaException as pe:
+            print('Erro!', pe)
