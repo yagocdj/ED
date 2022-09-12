@@ -1,0 +1,20 @@
+E1-> E2-> E3-> E4-///
+40   35   92   24 (cargas)
+1    2    3    4  (posições)
+
+E6
+E5
+E4
+E3
+E2
+E1
+
+Tamanho = 6
+Posicao = 3
+
+Deslocamento = 6 - 3 = 3
+
+Na pilha, o topo indexa o elemento mais recentemente inserido.
+Quando topo == 0, a pilha está vazia.
+
+"Se tentarmos extrair algo de uma pilha vazia, dizemos que a pilha tem um estourou negativo, que é normalmente um erro. Se S.topo exceder n (tamanho da pilha), a pilha tem um estouro." Cormen

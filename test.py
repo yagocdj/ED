@@ -1,6 +1,4 @@
-a = float(input())
-b = float(input())
+value = None
+valueTwo = 'Olá'
 
-c = a + b
-
-print(c)
+print(valueTwo is None)
