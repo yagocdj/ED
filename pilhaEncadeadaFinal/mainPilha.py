@@ -35,5 +35,8 @@ for value in numerosDobrados:
     pilhaDobro.empilha(value)
 
 print(pilhaDobro)
-print(pilhaDobro.desempilha_n(6))
-print(pilhaDobro)
+
+print(pilhaDobro.obtemBase())
+
+# print(pilhaDobro.desempilha_n(6))
+# print(pilhaDobro)

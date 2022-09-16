@@ -160,4 +160,11 @@ class Pilha:
         return True
 
     def obtemBase(self) -> int:
-        pass  # terminar este método
+        if self.estaVazia():
+            raise PilhaException('Esta pilha não possui base (vazia)')
+        cursor = self.__start
+
+        while (cursor.prox is not None):
+            cursor = cursor.prox
+
+        return cursor
