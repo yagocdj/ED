@@ -1,4 +1,1 @@
-value = None
-valueTwo = 'Olá'
-
-print(valueTwo is None)
+print(10 % 12)

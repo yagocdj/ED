@@ -100,14 +100,14 @@ class Pilha:
 
     def empilha(self, conteudo: Any):
         pass
-        # self.__dados.append(conteudo)
+            # self.__dados.append(conteudo)
 
     def desempilha(self) -> Any:
         pass
         """
         if self.estaVazia():
             raise PilhaException(f'Pilha vazia.')
-        return self.__dados.pop() 
+        return self.__dados.pop()
         """
 
     def __str__(self):
