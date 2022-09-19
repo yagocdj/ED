@@ -34,9 +34,13 @@ pilhaDobro = Pilha()
 for value in numerosDobrados:
     pilhaDobro.empilha(value)
 
+print(pilhaDobro.subTopo())
+print(pilhaDobro.topo())
 print(pilhaDobro)
 
 print(pilhaDobro.obtemBase())
 
+print(pilhaDobro.inverte())
+print(pilhaDobro)
 # print(pilhaDobro.desempilha_n(6))
 # print(pilhaDobro)

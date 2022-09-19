@@ -141,11 +141,34 @@ class Pilha:
             pass
         """
 
+    def __getStart(self) -> No:
+        return self.__start
+
+    def inverte(self) -> bool:
+        if self.__tamanho <= 1:
+            return False
+
+        pilhaInvertida = Pilha()
+        cursor = self.__start
+        carga = None
+        while (cursor is not None):
+            carga = self.desempilha()
+            pilhaInvertida.empilha(carga)
+            cursor = cursor.prox
+        self.__start = pilhaInvertida.__getStart()
+
+        return True
+
     def subTopo(self) -> Any:
         subTopo = self.__start.prox
         if subTopo is None:
             raise PilhaException('A pilha não possui sub-topo.')
         return subTopo.carga
+
+    def topo(self) -> Any:
+        if self.estaVazia():
+            raise PilhaException(f'Uma pilha vazia não possui topo.')
+        return self.__start.carga
 
     def desempilha_n(self, n: int) -> bool:
         if n > self.__tamanho:
