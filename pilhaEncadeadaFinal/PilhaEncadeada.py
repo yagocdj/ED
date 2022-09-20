@@ -191,3 +191,19 @@ class Pilha:
             cursor = cursor.prox
 
         return cursor
+
+    def concatena(self, outraPilha: 'Pilha') -> None:
+        pilhaAux = Pilha()
+        # Inverter a pilha "outraPilha"
+        while (not outraPilha.estaVazia()):
+            pilhaAux.empilha(outraPilha.desempilha())
+        # descarregando paux na pilha que recebeu a chamada
+        while (not pilhaAux.estaVazia()):
+            self.empilha(pilhaAux.desempilha())
+
+        """ 
+        # utilizando o método inverte
+        outraPilha.inverte()
+        while (not outraPilha.estaVazia()):
+            self.empilha(outraPilha.desempilha())
+        """
