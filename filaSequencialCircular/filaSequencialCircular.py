@@ -14,6 +14,13 @@ class Fila:
         self.__ocupados = 0
         self.__dados = [None for i in range(tamanho)]
 
+    @classmethod
+    def combina(cls, filaResultante: 'Fila', fila1: 'Fila', fila2: 'Fila'):
+        tamanhoFilas = len(fila1) + len(fila2)
+        if (tamanhoFilas > filaResultante.tamanho()):
+            raise FilaException(
+                f'A fila de destindo não comporta {tamanhoFilas} elementos')
+
     def estaVazia(self) -> bool:
         return self.__ocupados == 0
 
