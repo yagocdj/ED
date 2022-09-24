@@ -28,3 +28,29 @@ try:
 
 except FilaException as fe:
     print(fe)
+
+novaFila = Fila(7)
+
+try:
+
+    print(novaFila)
+
+    novaFila.enfileira(1)
+    novaFila.enfileira(3)
+    novaFila.enfileira(5)
+    novaFila.enfileira(7)
+    novaFila.enfileira(9)
+    novaFila.enfileira(8)
+
+    print(novaFila)
+
+    novaFila.desenfileira()
+
+    print(novaFila)
+
+    novaFila.enfileira(11)
+
+    print(novaFila)
+
+except FilaException as fe:
+    print(fe)

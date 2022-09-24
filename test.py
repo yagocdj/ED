@@ -1,1 +1,3 @@
-print(10 % 12)
+testArray = [None, None, 1, 2, 3, None]
+
+print(testArray)

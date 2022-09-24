@@ -14,13 +14,6 @@ class Fila:
         self.__ocupados = 0
         self.__dados = [None for i in range(tamanho)]
 
-    @classmethod
-    def combina(cls, filaResultante: 'Fila', fila1: 'Fila', fila2: 'Fila'):
-        tamanhoFilas = len(fila1) + len(fila2)
-        if (tamanhoFilas > filaResultante.tamanho()):
-            raise FilaException(
-                f'A fila de destindo não comporta {tamanhoFilas} elementos')
-
     def estaVazia(self) -> bool:
         return self.__ocupados == 0
 
@@ -46,7 +39,7 @@ class Fila:
             raise FilaException(
                 f'Posicao inválida para a fila atual com {self.__ocupados} elementos')
 
-    def busca(self, chave: any) -> int:
+    def busca(self, chave: Any) -> int:
         inicio = self.__frente
         count = 0
         for i in range(self.__ocupados):
@@ -73,6 +66,7 @@ class Fila:
         carga = self.__dados[self.__frente]
         self.__frente = (self.__frente + 1) % self.__tamanho
         self.__ocupados -= 1
+        return carga
 
     def __str__(self):
         s = '[ '
@@ -80,7 +74,8 @@ class Fila:
         inicio = self.__frente
         for i in range(self.__ocupados):
             s += f'{self.__dados[inicio]} '
-            inicio = (inicio + 1) % self.__ocupados
+            # inicio = (inicio + 1) % self.__ocupados -> Não estava dando certo
+            inicio = (inicio + 1) % self.__tamanho  # agora deu certo
 
         s += ']'
         return s

@@ -41,13 +41,13 @@ class Fila:
 
             cursor = self.__head.inicio
             count = 1
-            while(count < posicao):
+            while (count < posicao):
                 cursor = cursor.prox
                 count += 1
             return cursor.carga
         except AssertionError:
             raise FilaException(
-                f'Posicao inválida para a fila atual com {self.__ocupados} elementos')
+                f'Posicao inválida para a fila atual com {self.__head.tamanho} elementos')
 
     def enfileira(self, conteudo: Any) -> None:
         """ novo = No(conteudo)

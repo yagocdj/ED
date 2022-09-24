@@ -24,7 +24,7 @@ class Pilha:
         return self.__start == None
 
     def tamanho(self) -> int:
-        '''
+        """
         # Percorre todos os nós de uma estrutura linear
         cont = 0
         cursor = self.__head
@@ -32,7 +32,7 @@ class Pilha:
             cont += 1
             cursor = cursor.prox
         return cont
-        '''
+        """
         return self.__tamanho
 
     def __len__(self) -> int:
