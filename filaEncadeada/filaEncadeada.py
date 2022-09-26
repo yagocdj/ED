@@ -107,5 +107,5 @@ class Fila:
         self.__head.final = None
         self.__head.tamanho = 0 """
 
-        while(not self.estaVazia()):
+        while (not self.estaVazia()):
             self.desenfileira()
