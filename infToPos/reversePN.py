@@ -1,5 +1,5 @@
 from PilhaSequencial import *
-
+import sys
 
 def is_operando(char: str) -> bool:
     char = char.upper()
@@ -8,7 +8,7 @@ def is_operando(char: str) -> bool:
     return False
 
 def is_operador(char: str) -> bool:
-    if char in ['+', '-', '*', '/', '^']:
+    if char in '+-*/^':
         return True
     return False
 
@@ -34,7 +34,6 @@ def obter_prioridade(operador: str) -> int:
 
 def infixaParaPosfixa(expressao: str) -> str:
     expressao = expressao.replace(' ', '')
-    print(expressao)
     stack = Pilha()
     output = ''
 
@@ -64,6 +63,7 @@ def infixaParaPosfixa(expressao: str) -> str:
 
 # MAIN
 
-# x = '((A + B) * C - ( D - E )) ^ (F + G)'
-x = 'A^B * C - D + E / F / (G + H )'
-print(infixaParaPosfixa(x))
+count = 0
+for line in sys.stdin:
+    count += 1
+    print(f'Expressão {count}:',infixaParaPosfixa(line))

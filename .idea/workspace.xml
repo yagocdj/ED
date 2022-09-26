@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9812d7-8f59-46d5-93b8-e386677ccea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clinicaComFila/Paciente.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clinicaComFila/filaClinica.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clinicaComFila/filaSequencialCircular.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infToPos/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filaEncadeada/filaEncadeada.py" beforeDir="false" afterPath="$PROJECT_DIR$/filaEncadeada/filaEncadeada.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infToPos/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/infToPos/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infToPos/reversePN.py" beforeDir="false" afterPath="$PROJECT_DIR$/infToPos/reversePN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <workItem from="1664124253415" duration="10342000" />
       <workItem from="1664142356630" duration="4135000" />
       <workItem from="1664164981657" duration="3297000" />
-      <workItem from="1664194330051" duration="3670000" />
+      <workItem from="1664194330051" duration="4488000" />
     </task>
     <servers />
   </component>
