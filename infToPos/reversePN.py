@@ -1,6 +1,7 @@
 from PilhaSequencial import *
 import sys
 
+    # CORRIGIR ESTE CONVERSOR
 def is_operando(char: str) -> bool:
     char = char.upper()
     if ord(char) >= ord('A') and ord(char) <= ord('Z'):
