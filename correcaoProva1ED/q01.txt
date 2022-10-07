@@ -1,0 +1,27 @@
+B*C-(D/E^(F-G)+H)-I/J
+
+B [] B
+* [*] B
+C [*] BC
+- [-] BC*
+( [-(] BC*
+D [-(] BC*D
+/ [-(/] BC*D
+E [-(/] BC*DE
+^ [-(/^] BC*DE
+( [-(/^(] BC*DE
+F [-(/^(] BC*DEF
+- [-(/^(-] BC*DEF
+G [-(/^(-] BC*DEFG
+) [-(/^] BC*DEFG-
++ [-(+] BC*DEFG-^/
+H [-(+] BC*DEFG-^/H
+) [-] BC*DEFG-^/H+
+- [-] BC*DEFG-^/H+-
+I [-] BC*DEFG-^/H+-I
+/ [-/] BC*DEFG-^/H+-
+J [-/] BC*DEFG-^/H+-IJ
+
+DESEMPILHAR O QUE AINDA ESTÁ NA PILHA
+
+BC*DEFG-^/H+-IJ/-

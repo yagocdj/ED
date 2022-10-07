@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9812d7-8f59-46d5-93b8-e386677ccea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/infToPos/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infToPos/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/infToPos/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infToPos/reversePN.py" beforeDir="false" afterPath="$PROJECT_DIR$/infToPos/reversePN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Dev/ED/clinicaComFila&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Dev/pythonDev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\ED\clinicaComFila" />
@@ -72,7 +70,10 @@
       <workItem from="1664124253415" duration="10342000" />
       <workItem from="1664142356630" duration="4135000" />
       <workItem from="1664164981657" duration="3297000" />
-      <workItem from="1664194330051" duration="4488000" />
+      <workItem from="1664194330051" duration="5152000" />
+      <workItem from="1664458777155" duration="1715000" />
+      <workItem from="1664562728713" duration="97000" />
+      <workItem from="1664855661716" duration="177000" />
     </task>
     <servers />
   </component>
