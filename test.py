@@ -1,9 +1,6 @@
-vowels = ['a', 'e', 'i', 'o', 'u']
+my_string = 'olá! Eu estou muito feliz!'
+counter = 0
 
-s = 'eu me chamo fulanoo'
-vowels_counter = 0
-for char in s:
-    if char in vowels:
-        vowels_counter += 1
-
-print(vowels_counter)
+while my_string[counter]:
+    print(my_string[counter])
+    counter += 1

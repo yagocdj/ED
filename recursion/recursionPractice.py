@@ -1,3 +1,5 @@
+def recursiveLength(string, counter=0):
+    pass
 
 
 def potenciaYago(base, exp) -> int:
