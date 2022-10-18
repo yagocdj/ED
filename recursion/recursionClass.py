@@ -135,8 +135,11 @@ def menores_rec(numbers_list: List[int], key: int) -> int:
 
 
 def decToBin(number: int):
-    # TODO
-    pass
+    if number // 2 == 0:
+        print(number % 2, end='')
+        return
+    decToBin(number // 2)
+    print(number % 2, end='')
 
 
 """
@@ -193,6 +196,9 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 # printInverse('Olá, mundo!')
 # print(n_integers_sum(-1))
 # print(n_integers_sum(3))
-my_numbers = [10, 15, 13, 9, 1, 4, 2]
-my_key = 5
-print(menores_rec(my_numbers, my_key))
+# my_numbers = [10, 15, 13, 9, 1, 4, 2]
+# my_key = 5
+# print(menores_rec(my_numbers, my_key))
+
+decToBin(192)
+print()
