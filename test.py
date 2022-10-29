@@ -1,6 +1,3 @@
-my_string = 'olá! Eu estou muito feliz!'
-counter = 0
+var = None
+print(var) if var else print('Deu falso')
 
-while my_string[counter]:
-    print(my_string[counter])
-    counter += 1
