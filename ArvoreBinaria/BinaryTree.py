@@ -118,11 +118,13 @@ class BinaryTree:
     def leafsCount(self) -> int:
         return self.__leafsCount(self.__root)
 
-    def __leafsCount(self, node: Node) -> int:
+    def __leafsCount(self, node: 'Node') -> int:
         if node is None:
             return 0
         if node.left is None and node.right is None:
             return 1
+        else:
+            return self.__leafsCount(node.left) + self.__leafsCount(node.right)
 
     def __count(self, node: Node) -> int:
 
