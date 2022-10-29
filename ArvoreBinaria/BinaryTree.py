@@ -28,7 +28,7 @@ class BinaryTree:
             self.__root = Node(root_content)
 
     def isEmpty(self) -> bool:
-        return self.__root is not None
+        return self.__root is None
         # it's the same as 'return self.__root == None
 
     def getRoot(self) -> Any:
@@ -51,8 +51,11 @@ class BinaryTree:
         self.__preorder(node.left)
         self.__preorder(node.right)
 
-    def inorder(self):
-        self.__inorder(self.__root)
+    def inorder(self, origin: Origin = Origin.ROOT):
+        if origin == Origin.ROOT:
+            self.__inorder(self.__root)
+        elif origin == Origin.CURSOR:
+            self.__inorder(self.__cursor)
 
     def __inorder(self, node):
         if node is None:
@@ -61,8 +64,11 @@ class BinaryTree:
         print(f'{node.content}', end=' ')
         self.__inorder(node.right)
 
-    def postorder(self):
-        self.__postroder(self.__root)
+    def postorder(self, origin: Origin = Origin.ROOT):
+        if origin == Origin.ROOT:
+            self.__postroder(self.__root)
+        elif origin == Origin.CURSOR:
+            self.__postorder(self.__cursor)
 
     def __postorder(self, node):
         if node is None:
@@ -106,6 +112,17 @@ class BinaryTree:
     def __height(self, node) -> int:
         if node is None:
             return 0
+        return 0  # draft
+        # TODO - finish this method
+
+    def leafsCount(self) -> int:
+        return self.__leafsCount(self.__root)
+
+    def __leafsCount(self, node: Node) -> int:
+        if node is None:
+            return 0
+        if node.left is None and node.right is None:
+            return 1
 
     def __count(self, node: Node) -> int:
 
