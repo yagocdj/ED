@@ -107,13 +107,19 @@ class BinaryTree:
             return False
 
     def height(self) -> int:
-        return self.__height(self.__root)
+        if self.__root.left is None and self.__root.right is None:
+            return 1
+        else:
+            return self.__height(self.__root)
 
+    # FIXME - correct this method
     def __height(self, node) -> int:
         if node is None:
             return 0
-        return 0  # draft
-        # TODO - finish this method
+        if node.left is not None or node.right is not None:
+            return 1 + self.__height(node.left) + self.__height(node.right)
+        elif node.left is None and node.right is None:
+            return 0
 
     def leafsCount(self) -> int:
         return self.__leafsCount(self.__root)
@@ -162,7 +168,6 @@ class BinaryTree:
                     self.__cursor.right.right == None:
                 self.__cursor.right = None
 
-    # TODO - explain to myself how does '__go' works
     def go(self, key: int) -> Node:
         return self.__go(key, self.__root)
 
