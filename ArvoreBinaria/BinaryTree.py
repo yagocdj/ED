@@ -114,12 +114,29 @@ class BinaryTree:
 
     # FIXME - correct this method
     def __height(self, node) -> int:
+        """
         if node is None:
             return 0
         if node.left is not None or node.right is not None:
             return 1 + self.__height(node.left) + self.__height(node.right)
         elif node.left is None and node.right is None:
             return 0
+        """
+
+        if node is None:
+            return 0
+        else:
+            return 1 + max(self.__height(node.left), self.__height(node.right))
+
+    def getLevel(self, key) -> int:
+        if self.__root.content == key:
+            return 1
+        else:
+            return 1 + self.__getLevel(key, self.__root)
+
+    # TODO - finish this method
+    def __getLevel(self, key, node: 'Node') -> int:
+        pass
 
     def leafsCount(self) -> int:
         return self.__leafsCount(self.__root)
