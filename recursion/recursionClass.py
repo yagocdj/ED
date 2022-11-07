@@ -112,8 +112,8 @@ def printInverse(string):
     print(string[0], end='')
 
 
-def compareStr(string_1: str, string_2: str) -> int:
-    # TODO
+def compareStr(string_one: str, string_two: str) -> int:
+    # TODO - finish this function
     pass
 
 
@@ -140,6 +140,27 @@ def decToBin(number: int):
         return
     decToBin(number // 2)
     print(number % 2, end='')
+
+
+def ispalindrome(string: str):
+    if len(string) == 0:
+        return ''
+    # TODO - finish this function
+    """ reverse_str = ispalindrome(string[1:]) + string[0]
+    normal_str = string[0] + ispalindrome(string[1:]) """
+
+
+def invictus(mass: float):
+    return invictusAux(mass, 0)
+
+
+def invictusAux(mass: float, time: int):
+    if mass < 0.8:
+        return time, mass
+    if time % 50 == 0:
+        return invictusAux(mass / 2, time+1)
+    else:
+        return invictusAux(mass, time+1)
 
 
 """
@@ -200,5 +221,9 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 # my_key = 5
 # print(menores_rec(my_numbers, my_key))
 
-decToBin(192)
-print()
+# decToBin(192)
+# print(ispalindrome('arara'))  # True
+# print(ispalindrome('carro'))  # False
+# print(ispalindrome('mamam'))  # True
+
+print(invictus(100))

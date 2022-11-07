@@ -1,4 +1,3 @@
-print('0', end='')
-print('0', end='')
-print('1', end='')
-print('0', end='')
+value = 150
+
+print(value % 50 == 0)
