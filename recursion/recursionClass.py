@@ -226,4 +226,4 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 # print(ispalindrome('carro'))  # False
 # print(ispalindrome('mamam'))  # True
 
-print(invictus(100))
+print(invictus(10))
