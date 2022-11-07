@@ -1,7 +1,8 @@
 from enum import Enum
+from typing import Any
 
 class No:
-    def __init__(self,carga:any):
+    def __init__(self,carga:Any):
         self.carga = carga
         self.esq = None
         self.dir = None
@@ -11,17 +12,17 @@ class No:
 
  
 class ArvoreBinaria:        
-    def __init__(self, carga_da_raiz:any = None):
+    def __init__(self, carga_da_raiz:Any = None):
         self.__raiz = No(carga_da_raiz) if carga_da_raiz != None else carga_da_raiz
 
-    def criarRaiz(self, carga_da_raiz:any):
+    def criarRaiz(self, carga_da_raiz:Any):
         if self.__raiz is None:
             self.__raiz = No(carga_da_raiz)
 
     def estaVazia(self)->bool:
         return self.__raiz == None
         
-    def getRaiz(self)->any:
+    def getRaiz(self)->Any:
         if self.__raiz is not None:
             return self.__raiz.carga
         else:
@@ -57,13 +58,13 @@ class ArvoreBinaria:
         self.__posordem(no.dir)
         print(f'{no.carga}', end=' ')
 
-    def add(self, carga:any):
+    def add(self, carga:Any):
         if(self.__raiz == None):
             self.__raiz = No(carga)
         else:
             self.__add(carga,self.__raiz)
 
-    def __add(self, carga:any, node:'No'):
+    def __add(self, carga:Any, node:'No'):
         if ( carga < node.carga):
             if( node.esq != None):
                 self.__add(carga, node.esq)
@@ -84,7 +85,7 @@ class ArvoreBinaria:
     def __len__(self):
         return self.__count(self.__raiz)
 
-    def busca(self, chave:any ):
+    def busca(self, chave:Any ):
         return self.__busca(chave, self.__raiz)
     
     def __busca(self, chave, no:No):
@@ -100,7 +101,7 @@ class ArvoreBinaria:
             return False
 
 
-    def removeNo(self, chave:any)->any:
+    def removeNo(self, chave:Any)->Any:
         if self.__raiz is None:
             return None
         if chave == self.__raiz.carga:
