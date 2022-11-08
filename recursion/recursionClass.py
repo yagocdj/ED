@@ -114,9 +114,13 @@ def printInverse(string):
 
 
 def compareStr(string_one: str, string_two: str) -> int:
-    # TODO - finish this function
-    pass
-
+    if len(string_one) == len(string_two):
+        return 0
+    if len(string_one) == 0:
+        return -1
+    if len(string_two) == 0:
+        return 1
+    return compareStr(string_one[1:], string_two[1:])
 
 def n_integers_sum(n: int) -> int:
     if n < 0:
@@ -223,8 +227,12 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 # print(menores_rec(my_numbers, my_key))
 
 # decToBin(192)
-print(ispalindrome('arara'))  # True
-print(ispalindrome('carro'))  # False
-print(ispalindrome('mamam'))  # True
+# print(ispalindrome('arara'))  # True
+# print(ispalindrome('carro'))  # False
+# print(ispalindrome('mamam'))  # True
+
+print(compareStr('maçã', 'pera'))
+print(compareStr('cerveja', 'sabão'))
+print(compareStr('valor', 'algoritmos'))
 
 # print(invictus(10))
