@@ -1,9 +1,9 @@
-from ArvoreBinaria import ArvoreBinaria,Origem, No
+from ArvoreBinaria import ArvoreBinaria, Origem
 
-arv2  = ArvoreBinaria()
+arv2 = ArvoreBinaria()
 arv = ArvoreBinaria('A')
 
-#arv.preordem(Origem.RAIZ)
+# arv.preordem(Origem.RAIZ)
 arv.addFilhoEsquerdo('D')
 arv.addFilhoDireito('F')
 arv.descerEsquerda()
@@ -31,10 +31,9 @@ arv.removeNo('F')
 arv.preordem()
 print('\nCursor: ', arv.getCursor())
 arv.removeNo('K')
-arv.preordem()
+arv.preordem(Origem.RAIZ)
 print('Len: ', len(arv))
 print('RemoveRaiz():', arv.removeRaiz())
 
 no = arv.go('K')
 print(no)
-
