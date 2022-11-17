@@ -1,10 +1,11 @@
 from ArvoreBinariaBusca import ArvoreBinaria, No 
 
-tree = ArvoreBinaria(42)
-tree.add(15)
-tree.add(27)
-tree.add(6)
-tree.add(88)
+btree = ArvoreBinaria(13)
 
-tree.emordem()
+btree.add(10)
+btree.add(5)
+btree.add(11)
+btree.add(24)
+
+print(btree.removeNo(10))
 

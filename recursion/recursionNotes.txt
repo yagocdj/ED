@@ -1,0 +1,5 @@
+# Recursion notes
+
+seqTermos2(n)
+n = 5
+

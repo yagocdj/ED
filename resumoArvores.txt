@@ -1,0 +1,4 @@
+Regras de remoção BST
+
+1º caso - remover nó folha
+- o nó folha recebe none e retorna none para o pai

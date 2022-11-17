@@ -122,6 +122,7 @@ def compareStr(string_one: str, string_two: str) -> int:
         return 1
     return compareStr(string_one[1:], string_two[1:])
 
+
 def n_integers_sum(n: int) -> int:
     if n < 0:
         raise Exception('The argument "n" is smaller than 0')
@@ -166,6 +167,31 @@ def invictusAux(mass: float, time: int):
         return invictusAux(mass / 2, time+1)
     else:
         return invictusAux(mass, time+1)
+
+
+def seqTermos1(n: int):
+    if n < 1:
+        raise Exception('The integer n must be greater than 0.')
+    if n == 1:
+        return 1
+    return 1/n + seqTermos1(n-1)
+
+
+def seqTermos2(n: int):
+    if n < 0:
+        raise Exception('The integer n must be greater than 0.')
+    if n == 0:
+        return 0
+    return (n**2 + 1) / (n+3) + seqTermos2(n-1)
+
+
+def isSorted(array: list) -> bool:
+    if len(array) == 1:
+        return True
+    for i in range(1, len(array)):
+        if array[i] < array[0]:
+            return False
+    return isSorted(array[1:])
 
 
 """
@@ -231,8 +257,25 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 # print(ispalindrome('carro'))  # False
 # print(ispalindrome('mamam'))  # True
 
-print(compareStr('maçã', 'pera'))
-print(compareStr('cerveja', 'sabão'))
-print(compareStr('valor', 'algoritmos'))
+# print(compareStr('maçã', 'pera'))
+# print(compareStr('cerveja', 'sabão'))
+# print(compareStr('valor', 'algoritmos'))
+
+# print(seqTermos1(5))
+# print(seqTermos1(2))
+# print(seqTermos1(1))
+# print(seqTermos1(-1))
+
+# print(seqTermos2(5))
+# print(seqTermos2(2))
+# print(seqTermos2(1))
+# print(seqTermos2(-1))
 
 # print(invictus(10))
+
+print(isSorted([1, 2, 3, 4]))  # True
+print(isSorted([10, 1, 2, 1, 3, 9, 5]))  # False
+print(isSorted([10, 15, 20]))  # True
+print(isSorted([1, 10, 3, 5]))  # False
+print(isSorted([1]))  # True
+print(isSorted([1, -1]))  # False

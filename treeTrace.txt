@@ -1,0 +1,47 @@
+# removeNo(self, chave)
+# __removeNo(self, node, chave)
+# __minValueNode(node)
+
+raiz = 13
+chave = 10
+
+c1 removeNo(10)
+raiz is None? False
+chave == raiz? False
+retorno = 13
+return retorno.carga -> return 13 FINAL
+
+c2 __removeNo(13, 10)
+node is None? False
+chave < node.carga? True
+    node.esq = 11
+chave > node.carga? False
+else? False
+return node -> return 13 
+
+c3 __removeNo(10, 10)
+node is None? False
+chave < node.carga? False
+chave > node.carga? False
+else # chave igual ao nó (achei o nó a ser removido)
+    node.esq is None? False
+    node.dir is None? False
+    temp = 11
+    node.carga = temp.carga -> node.carga = 11
+    node.dir = None
+return node -> return 11
+
+c4 __minValueNode(11)
+current = node -> current = 11
+while current.esq is not None? False
+return current -> return 11
+
+c5 __removeNo(11, 11)
+node is None? False
+chave > node.carga? False
+chave < node.carga? False
+else
+    node.esq is None? True
+        temp = node.dir -> temp = None
+        node = None
+        return temp -> return None

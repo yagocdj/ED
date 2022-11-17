@@ -1,0 +1,155 @@
+# Quick Sort
+
+arr = [20, 5, 15, 4, 2, 9, 11]
+       0   1  2   3  4  5  6
+arr_indexes [0 ... 6]
+
+low = 0
+hight = 6
+
+quickSortRun(arr, 0, 6)
+    0 < 6? True
+        # pi -> partition index
+        pi = partition(arr, 0, 6) -> returns 6
+        quickSortRun(arr, 0, 5)
+        quickSortRun(arr, 7, 6)
+
+partition(arr, 0, 6)
+    pivot = arr[low] -> pivot = 20
+    a = low + 1 -> a = 1
+    b = hight -> b = 6
+
+    while (True)
+        while (1 <= 6 and 5 <= 20)? True
+            a += 1 -> a = 2
+        (2 <= 6 and 15 <= 20)? True
+            a += 1 -> a = 3
+        (3 <= 6 and 4 <= 20)? True
+            a += 1 -> a = 4
+        (4 <= 6 and 2 <= 20)? True
+            a += 1 -> a = 5
+        (5 <= 6 and 9 <= 20)? True
+            a += 1 -> a = 6
+        (6 <= 6 and 11 <= 20)? True
+            a += 1 -> a = 7
+        (7 <= 6 and ...)? False
+        
+        while (11 > 20)? False
+
+        7 < 6? False
+        7 > 6? True
+            break
+
+    arr[0] = arr[6] -> arr[0] = 11
+    arr[6] = 20
+
+    return 6
+
+# arr = [11, 5, 15, 4, 2, 9, 20]
+
+quickSortRun(arr, 0, 5)
+    0 < 5? True
+        pi = partition(arr, 0, 5) -> pi = 4
+        quickSortRun(arr, 0, 3)
+        quickSortRun(arr, 5, 5)
+
+partition(arr, 0, 5)
+    pivot = arr[low] -> pivot = 11
+    a = low + 1 -> a = 1
+    b = higth -> b = 5
+    
+    while True
+        while (1 <= 5 and 5 <= 11)? True
+            a += 1 -> a = 2
+        (2 <= 5 and 15 <= 11)? False
+
+        while (9 > 11)? False
+
+        2 < 5? True
+            arr[a], arr[b] = arr[b], arr[a] -> arr[2] = 9, arr[5] = 15
+            a += 1 -> a = 3
+            b -= 1 -> b = 4
+
+        3 > 4? False
+        
+        while (3 <= 5 and 4 <= 11)? True
+            a += 1 -> a = 4
+        (4 <= 5 and 2 <= 11)? True
+            a += 1 -> a = 5
+        (5 <= 5 and 15 <= 11)? False
+
+        while (2 > 11)? False
+        
+        5 < 4? False
+        5 > 4? True
+            break
+    arr[low] = arr[b] -> arr[0] = 2
+    arr[b] = pivot -> arr[4] = 11
+
+    return b -> return 4
+       
+# arr = [2, 5, 9, 4, 11, 15, 20]
+
+quickSortRun(arr, 0, 3)
+    0 < 3? True
+        pi = partition(arr, 0, 3) -> returns 0
+        quickSortRun(arr, 0, -1)
+        quickSortRun(arr, 1, 3)
+
+partition(arr, 0, 3)
+    pivot = 2
+    a = 1
+    b = 3
+
+    while True
+        while (1 <= 3 and 5 <= 2)? False
+        
+        while (4 > 2)? False
+            b -= 1 -> b = 2
+        (9 > 2)? True
+            b -= 1 -> b = 1
+        (5 > 2)? True
+            b -= 1 -> b = 0
+        (2 > 2)? False
+        
+        1 < 0? False
+        1 > 0? True
+            break
+
+        arr[low] = arr[b] -> arr[0] = 2
+        arr[b] = pivot -> arr[0] = 2
+
+        return b -> return 0
+
+# arr = [2, 5, 9, 4, 11, 15, 20]
+
+quickSortRun(arr, 0, -1)
+    0 < -1? False
+    return None
+
+quickSortRun(arr, 1, 3)
+    1 < 3? True
+        pi = partition(arr, 1, 3) -> returns 2
+        quickSortRun(arr, 1, 1) -> None
+        quickSortRun(arr, 3, 3) -> None
+
+partition(arr, 1, 3)
+    pivot = array[low] -> pivot = 5
+    a = low + 1 -> a = 2
+    b = hight -> b = 3
+    
+    while True
+        while (2 <= 3 and 9 <= 5)? False
+
+        while (4 > 5)? False
+        2 < 3? True
+            arr[a], arr[b] = arr[b], arr[a] -> arr[2] = 4, arr[3] = 9
+            a += 1 -> a = 3
+            b -= 1 -> b = 2
+        3 > 2? True
+            break
+    arr[1] = arr[2] -> arr[1] = 4
+    arr[2] = 5
+
+    return b -> return 2
+
