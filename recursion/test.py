@@ -1,3 +1,4 @@
-value = 150
+string = 'abcde'
 
-print(value % 50 == 0)
+new = string.replace('de', 'zap')
+print(new)

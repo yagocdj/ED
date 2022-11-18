@@ -148,12 +148,32 @@ def decToBin(number: int):
     print(number % 2, end='')
 
 
+def decToBaseAux(number: int, base: int) -> str:
+    hex_digits = {10: 'A', 11: 'B', 12: 'C',
+                  13: 'D', 14: 'E', 15: 'F'}
+    if number == 0:
+        return ''
+    if number % base < 10:
+        return decToBaseAux(number // base, base) + str(number % base)
+    else:
+        return decToBaseAux(number // base, base) + hex_digits[number % base]
+
+
+def decToBase(number: int, base: int):
+    if base in [2, 8, 16]:
+        resultado = decToBaseAux(number, base)
+    return resultado
+
+
+print(decToBase(2737, 16))
+
+
 def ispalindrome(string: str):
-    normal_string = reverseString(string)
-    reverse_string = string
-    return normal_string == reverse_string
-    """ reverse_str = ispalindrome(string[1:]) + string[0]
-    normal_str = string[0] + ispalindrome(string[1:]) """
+    if len(string) == 0:
+        return True
+    if string[0] == string[-1]:
+        return ispalindrome(string[1:-1])
+    return False
 
 
 def invictus(mass: float):
@@ -192,6 +212,18 @@ def isSorted(array: list) -> bool:
         if array[i] < array[0]:
             return False
     return isSorted(array[1:])
+
+
+def isSortedLucas(array: list) -> bool:
+    if len(array) <= 1:
+        return True
+    return True if isSortedLucas(array[1:]) and array[0] <= array[1] else False
+
+
+def arraySum(array: list) -> int:
+    if len(array) == 0:
+        return 0
+    return array[0] + arraySum(array[1:])
 
 
 """
@@ -273,9 +305,35 @@ maior([1.3, 1.9, 2.1, 3.0]) returns 3.0
 
 # print(invictus(10))
 
+"""
+print('isSorted(): ')
 print(isSorted([1, 2, 3, 4]))  # True
 print(isSorted([10, 1, 2, 1, 3, 9, 5]))  # False
 print(isSorted([10, 15, 20]))  # True
 print(isSorted([1, 10, 3, 5]))  # False
 print(isSorted([1]))  # True
 print(isSorted([1, -1]))  # False
+
+print('isSortedLucas(): ')
+print(isSorted([1, 2, 3, 4]))  # True
+print(isSorted([10, 1, 2, 1, 3, 9, 5]))  # False
+print(isSorted([10, 15, 20]))  # True
+print(isSorted([1, 10, 3, 5]))  # False
+print(isSorted([1]))  # True
+print(isSorted([1, -1]))  # False
+"""
+
+"""
+print(arraySum([1, 2, 3, 4, 5, 6]))
+print(arraySum([3, 5, 7, 1, 10]))
+"""
+""" 
+print(ispalindrome('azulazul'))
+print(ispalindrome('arara'))
+print(ispalindrome('banana'))
+print(ispalindrome('ana'))
+print(ispalindrome('ananabanana'))
+print(ispalindrome('romametemamor'))
+"""
+
+print()
